@@ -15,7 +15,7 @@ services:
       - db
   app:
     build:
-      context: node
+      context: ./node
     container_name: app
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
     networks:
